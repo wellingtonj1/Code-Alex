@@ -1,0 +1,126 @@
+#include <iostream>
+
+using namespace std;
+
+void vetler(int* x,int tx)
+{
+    for(int i=0; i<tx;i++)
+    {
+        cin>>x[i];
+    }
+}
+
+int main()
+{
+    int escolha,tma,tmb;
+    cout << "\n 1 = Definir tamanho de dois conjunto e ler os dois \n 2 = verifica se A e/ou B são vazios \n 3 = Determina o conjunto C = A ∪ B \n 4 = Determine o conjunto D = A ∩ B \n 5 = Determina o conjunto E = A - B \n 6 = Determine o conjunto F = B - A \n 7 = A é subconjunto de B ? \n 8 = B é subconjunto de A ? \n 9 = A e B são conjuntos identicos ? \n 10 = A e B são conjuntos disjuntos ? \n 11 = Calcule a amplitude dos conjuntos A e B \n 12 = Calcule o produto escalar se for possivel \n 13 = Determine o conjunto G, formado pelos membros que compoem a maior subcadeia ordenada de forma crescemte em A \n 14 = Determine o conjunto H, formado pelos membros que  compoem a maior subcadeia ordenada de forma decrescente em B. \n 15 = Determine o conjunto I, formado pelos membros de A e B, intercalados de forma ordenada - os conjuntos A e B não estão ordenados \n\n";
+    cin>>escolha;
+    switch(escolha)
+    {
+        case 1:
+        {
+        //função ler conjunto A e B de numeros inteiros e definir tamanho de conjuntos
+        cout<< "\n Digite o tamanho do conjunto A: ";
+        cin>> tma;
+        cout<< "\n Digite o tamanho do conjunto B: ";
+        cin>>tmb;
+        int a[tma],b[tmb];
+
+        vetler(a,tma);
+        vetler(b,tmb);
+
+        break;
+        }
+            case 2:
+            {
+            // função A e B são vazios ?
+            
+            break;
+            }
+                case 3:
+                    {
+                // função uniao ou soma dos conjuntos
+
+                break;
+                    }
+                    case 4:
+                    {
+                    //função intersecção ou elementos em comum
+
+                    break;
+                    }
+                        case 5:
+                        {
+                        //função diferença ouu menos
+
+                        break;
+                        }
+                            case 6:
+                            {
+                            //função diferença ouu menos no inverso de valores
+
+                            break;
+                            }
+                                case 7:
+                                {
+                                //descobrir se A é subconjunto de B
+
+                                break;
+                                }
+                                    case 8:
+                                    {
+                                    //descobrir se B é subconjunto de A
+
+                                    break;
+                                    }
+                                        case 9:
+                                        {
+                                        //descobrir se A e B são conjuntos identicos
+
+                                        break;
+                                        }
+                                            case 10:
+                                            {
+                                            //descobrir se A e B são conjuntos disjuntos
+
+                                            break;
+                                            }
+
+                                                case 11:
+                                                {
+                                                    // Calcule a amplitude dos conjuntos A e B.
+
+                                                break;
+                                                }
+                                                    case 12:
+                                                    {
+                                                        // Calcule o produto escalar entre A e B quando possivel
+
+                                                        break;
+                                                    }
+                                                        case 13:
+                                                        {
+                                                            // Determine o conjunto G, formado pelos membros que compoem a maior subcadeia ordenada de forma cescente em A.
+
+                                                            break;
+                                                        }
+                                                            case 14:
+                                                            {
+                                                                // Determine o conjunto H, formado pelos membros que  compoem a maior subcadeia ordenada de forma decrescente em B.
+
+                                                                break;
+                                                            }
+                                                                case 15:
+                                                                {
+                                                                    // Determinar o conjunto i,formado pelos membros de A e B,intercalados de forma ordenada - os conjuntos A e B não estão ordenados.
+
+                                                                    break;
+                                                                }
+
+
+
+
+
+    }
+
+}
