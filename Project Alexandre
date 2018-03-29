@@ -64,6 +64,7 @@ int main()
         case 1:
         {// ler valores dos conjuntos
             vetimp(a,tma);
+            cout<<"\n Do segundo conjunto são : ";
             vetimp(b,tmb);
             break;
         }
@@ -78,6 +79,8 @@ int main()
             {
                 cout << "\n O conjunto B é vazio ";
             }
+            else
+                cout <<"\n Não são vazios ";
             break;
             }
                 case 3:
