@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
+
 using namespace std;
 
 void intersec(int* a,int tma,int* b, int tmb,int* c,int tmc)
