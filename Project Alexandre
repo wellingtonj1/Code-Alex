@@ -1,26 +1,50 @@
 #include <iostream>
-
+#include <stdlib.h>
 using namespace std;
-void vetuniao(int* a,int tma,int* b, int tmb, int*c , int tmc)
+
+void intersec(int* a,int tma,int* b, int tmb,int* c,int tmc)
 {
-    *c=*a;
-    tmc=tma;
-    int dif=0;
-    for(int i=0;i<tma;i++)
+    for(int i=0; i<tma; i++)
     {
-        for(int j=0;j<tmb;j++)
+        for(int j=0;j<tmb; j++)
         {
-            dif=c[i]-b[j];
-            if(dif==0)
+            if(a[i]==b[j] || b[j]==a[i])
             {
-                //são iguais
-            }
-            else
-            {
-                //são diferentes
+                c[tmc]=b[j];
+                tmc+=1;
             }
         }
     }
+    cout<<" Conjunto das interceções D = ";
+    for(int x=0;x<tmc; x++)
+    {
+        cout << c[x] << "\t " ;
+    }
+}
+
+void vetuniao(int* a,int tma,int* b, int tmb, int* c , int tmc)
+{
+    *c=*a;
+
+    for(int i=0; i<tma; i++)
+    {
+        for(int j=0;j<tmb; j++)
+        {
+            if(a[i]!=b[j] || b[j]!=a[i])
+            {
+                if(c[tmc]!=b[j])
+                c[tmc]=b[j];
+                tmc+=1;
+            }
+        }
+    }
+    cout << "Conjunto das unioes C = ";
+    for(int x=0; x<tmc; x++)
+    {
+        cout << c[x] <<"\t";
+    }
+
+
 }
 void vetimp(int* vx, int tx)
 {
@@ -41,7 +65,10 @@ int main()
 {
     int escolha,tma,tmb;
     cout << "\n Primeiro Defina o tamanho de dois conjunto \n 1 = ler os dois conjuntos inseridos \n 2 = verifica se A e/ou B são vazios \n 3 = Determina o conjunto C = A ∪ B \n 4 = Determine o conjunto D = A ∩ B \n 5 = Determina o conjunto E = A - B \n 6 = Determine o conjunto F = B - A \n 7 = A é subconjunto de B ? \n 8 = B é subconjunto de A ? \n 9 = A e B são conjuntos identicos ? \n 10 = A e B são conjuntos disjuntos ? \n 11 = Calcule a amplitude dos conjuntos A e B \n 12 = Calcule o produto escalar se for possivel \n 13 = Determine o conjunto G, formado pelos membros que compoem a maior subcadeia ordenada de forma crescemte em A \n 14 = Determine o conjunto H, formado pelos membros que  compoem a maior subcadeia ordenada de forma decrescente em B. \n 15 = Determine o conjunto I, formado pelos membros de A e B, intercalados de forma ordenada - os conjuntos A e B não estão ordenados \n\n";
-     cout<< "\n Digite o tamanho do conjunto A: ";
+    string continua="s";
+    while(continua=="s"||continua=="Sim"||continua=="S")
+ {
+    cout<< "\n Digite o tamanho do conjunto A: ";
         cin>> tma;
         cout<< "\n Digite o tamanho do conjunto B: ";
         cin>>tmb;
@@ -66,7 +93,12 @@ int main()
             vetimp(a,tma);
             cout<<"\n Do segundo conjunto são : ";
             vetimp(b,tmb);
+            cout << "\n deseja continuar ? S/N";
+            cin >> continua;
+            system("cls");
+
             break;
+
         }
             case 2:
             {
@@ -74,27 +106,50 @@ int main()
             if(tma==0)
             {
                 cout << "\n O conjunto A é vazio ";
+                cout << "\n deseja continuar ? S/N";
+                cin >> continua;
+                system("cls");
+
             }
             if(tmb==0)
             {
                 cout << "\n O conjunto B é vazio ";
+                cout << "\n deseja continuar ? S/N";
+                cin >> continua;
+                system("cls");
+
             }
             else
+            {
                 cout <<"\n Não são vazios ";
+                cout << "\n deseja continuar ? S/N";
+                cin >> continua;
+                system("cls");
+            }
             break;
             }
                 case 3:
                     {
                //cout<<"  função uniao ou soma dos conjuntos ";
-                    int tmc;
+                    int tmc=0;
                     int vetc[tmc];
                     vetuniao(a,tma,b,tmb,vetc,tmc);
+                    cout << "\n deseja continuar ? S/N";
+                    cin >> continua;
+                    system("cls");
 
                 break;
                     }
                     case 4:
                     {
-                    cout<<"função intersecção ou elementos em comum";
+                    //cout<<"função intersecção ou elementos em comum";
+                    int tmc=0;
+                    int c[tmc];
+
+                    intersec(a,tma,b,tmb,c,tmc);
+                    cout << "\n deseja continuar ? S/N";
+                    cin >> continua;
+                    system("cls");
 
                     break;
                     }
@@ -102,36 +157,47 @@ int main()
                         {
                         cout<<"função diferença ouu menos";
 
+                        cout << "\n deseja continuar ? S/N";
+                        cin >> continua;
                         break;
                         }
                             case 6:
                             {
                             cout<<"função diferença ouu menos no inverso de valores";
-
+                            cout << "\n deseja continuar ? S/N";
+                            cin >> continua;
                             break;
                             }
                                 case 7:
                                 {
                                 cout<<"descobrir se A é subconjunto de B";
-
+                                cout << "\n deseja continuar ? S/N";
+                                cin >> continua;
                                 break;
                                 }
                                     case 8:
                                     {
                                     cout<<"descobrir se B é subconjunto de A";
 
+
+                                    cout << "\n deseja continuar ? S/N";
+                                    cin >> continua;
                                     break;
                                     }
                                         case 9:
                                         {
                                         cout<<"descobrir se A e B são conjuntos identicos";
 
+                                        cout << "\n deseja continuar ? S/N";
+                                        cin >> continua;
                                         break;
                                         }
                                             case 10:
                                             {
                                             cout<<"descobrir se A e B são conjuntos disjuntos";
 
+                                            cout << "\n deseja continuar ? S/N";
+                                            cin >> continua;
                                             break;
                                             }
 
@@ -139,32 +205,45 @@ int main()
                                                 {
                                                     cout<< "Calcule a amplitude dos conjuntos A e B.";
 
+                                                cout << "\n deseja continuar ? S/N";
+                                                cin >> continua;
                                                 break;
                                                 }
                                                     case 12:
                                                     {
                                                         cout<< "Calcule o produto escalar entre A e B quando possivel";
 
+                                                        cout << "\n deseja continuar ? S/N";
+                                                        cin >> continua;
                                                         break;
                                                     }
                                                         case 13:
                                                         {
                                                             cout<< "Determine o conjunto G, formado pelos membros que compoem a maior subcadeia ordenada de forma cescente em A.";
 
+                                                            cout << "\n deseja continuar ? S/N";
+                                                            cin >> continua;
                                                             break;
                                                         }
                                                             case 14:
                                                             {
                                                                 cout<< "Determine o conjunto H, formado pelos membros que  compoem a maior subcadeia ordenada de forma decrescente em B.";
 
+                                                                cout << "\n deseja continuar ? S/N";
+                                                                cin >> continua;
                                                                 break;
                                                             }
                                                                 case 15:
                                                                 {
                                                                     cout<< "Determinar o conjunto i,formado pelos membros de A e B,intercalados de forma ordenada - os conjuntos A e B não estão ordenados.";
 
+                                                                    cout << "\n deseja continuar ? S/N";
+                                                                    cin >> continua;
                                                                     break;
                                                                 }
 
     }
+
+ }
+
 }
