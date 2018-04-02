@@ -108,162 +108,164 @@ int main()
         cout<< "\nDigite a operação que você deseja realizar = ";
     cin>>escolha;
     switch(escolha)
-    
+    {
 
-          case 1:
-          // ler valores dos conjuntos
-          vetimp(a,tma);
-          cout<<"\n Do segundo conjunto são : ";
-          vetimp(b,tmb);
-          cout << "\n deseja continuar ? S/N";
-          cin >> continua;
-          system("cls");
+        case 1:
+        {// ler valores dos conjuntos
+            vetimp(a,tma);
+            cout<<"\n Do segundo conjunto são : ";
+            vetimp(b,tmb);
+            cout << "\n deseja continuar ? S/N";
+            cin >> continua;
+            system("cls");
 
-          break;
-            
-        
-          case 2:
-            
-          // função A e B são vazios ?
-          if(tma==0)
-          {
-          cout << "\n O conjunto A é vazio ";
-          cout << "\n deseja continuar ? S/N";
-          cin >> continua;
-          system("cls");
+            break;
 
-          }
-          if(tmb==0)
-          {
-          cout << "\n O conjunto B é vazio ";
-          cout << "\n deseja continuar ? S/N";
-          cin >> continua;
-          system("cls");
+        }
+        case 2:
+        {
+        // função A e B são vazios ?
+        if(tma==0)
+        {
+        cout << "\n O conjunto A é vazio ";
+        cout << "\n deseja continuar ? S/N";
+        cin >> continua;
+        system("cls");
 
-            
-          else
-          {
-          cout <<"\n Não são vazios ";
-          cout << "\n deseja continuar ? S/N";
-          cin >> continua;
-          system("cls");
-		  }
-          break;
-            
-          case 3:
-                    
-               //cout<<"  função uniao ou soma dos conjuntos ";
-          int tmc=0;
-          int vetc[tmc];
-          vetuniao(a,tma,b,tmb,vetc,tmc);
-          cout << "\n deseja continuar ? S/N";
-          cin >> continua;
-          system("cls");
+        }
+        if(tmb==0)
+        {
+        cout << "\n O conjunto B é vazio ";
+        cout << "\n deseja continuar ? S/N";
+        cin >> continua;
+        system("cls");
 
-          break;
-                    
-          case 4:
-                    
-          //cout<<"função intersecção ou elementos em comum";
-          int tmc=0;
-          int c[tmc];
+        }
+        else
+        {
+        cout <<"\n Não são vazios ";
+        cout << "\n deseja continuar ? S/N";
+        cin >> continua;
+        system("cls");
+        }
+        break;
+        }
+        case 3:
+        {
+        //cout<<"  função uniao ou soma dos conjuntos ";
+        int tmc=0;
+        int vetc[tmc];
+        vetuniao(a,tma,b,tmb,vetc,tmc);
+        cout << "\n deseja continuar ? S/N";
+        cin >> continua;
+        system("cls");
 
-          intersec(a,tma,b,tmb,c,tmc);
-          cout << "\n deseja continuar ? S/N";
-          cin >> continua;
-          system("cls");
+        break;
+        }
+        case 4:
+        {
+        //cout<<"função intersecção ou elementos em comum";
+        int tmc=0;
+        int c[tmc];
 
-          break;
-                    
-          case 5:
-                        
-          //cout<<"função diferença ouu menos";
-          int tmc=0;
-          int c[tmc];
-          menas(a,tma,b,tmb,c,tmc);
+        intersec(a,tma,b,tmb,c,tmc);
+        cout << "\n deseja continuar ? S/N";
+        cin >> continua;
+        system("cls");
 
-          cout << "\n deseja continuar ? S/N";
-          cin >> continua;
-          break;
-          
-          case 6:
-                            
-          cout<<"função diferença ouu menos no inverso de valores";
-          cout << "\n deseja continuar ? S/N";
-          cin >> continua;
-          break;
-                            
-          case 7:
-                                
-          cout<<"descobrir se A é subconjunto de B";
-          cout << "\n deseja continuar ? S/N";
-          cin >> continua;
-          break;
-                                
-          case 8:
-                                    
-          cout<<"descobrir se B é subconjunto de A";
+        break;
+        }
+        case 5:
+        {
+        //cout<<"função diferença ouu menos";
+        int tmc=0;
+        int c[tmc];
+        menas(a,tma,b,tmb,c,tmc);
+
+        cout << "\n deseja continuar ? S/N";
+        cin >> continua;
+        break;
+        }
+        case 6:
+        {
+        cout<<"função diferença ouu menos no inverso de valores";
+        cout << "\n deseja continuar ? S/N";
+        cin >> continua;
+        break;
+        }
+        case 7:
+        {
+        cout<<"descobrir se A é subconjunto de B";
+        cout << "\n deseja continuar ? S/N";
+        cin >> continua;
+        break;
+        }
+        case 8:
+        {
+        cout<<"descobrir se B é subconjunto de A";
 
 
-          cout << "\n deseja continuar ? S/N";
-          cin >> continua;
-          break;
-                                    
-          case 9:
-                                        
-          cout<<"descobrir se A e B são conjuntos identicos";
+        cout << "\n deseja continuar ? S/N";
+        cin >> continua;
+        break;
+        }
+        case 9:
+        {
+        cout<<"descobrir se A e B são conjuntos identicos";
 
-          cout << "\n deseja continuar ? S/N";
-          cin >> continua;
-          break;
-                                        
-          case 10:
-                                            
-          cout<<"descobrir se A e B são conjuntos disjuntos";
+        cout << "\n deseja continuar ? S/N";
+        cin >> continua;
+        break;
+        }
+        case 10:
+        {
+        cout<<"descobrir se A e B são conjuntos disjuntos";
 
-          cout << "\n deseja continuar ? S/N";
-          cin >> continua;
-          break;
-                                            
-          case 11:
-                                                
-          cout<< "Calcule a amplitude dos conjuntos A e B.";
-          cout << "\n deseja continuar ? S/N";
-          cin >> continua;
-          break;
-												
-          case 12:
-                                                    
-          cout<< "Calcule o produto escalar entre A e B quando possivel";
+        cout << "\n deseja continuar ? S/N";
+        cin >> continua;
+        break;
+        }
 
-          cout << "\n deseja continuar ? S/N";
-          cin >> continua;
-          break;
-                                                    
-          case 13:
-              
-          cout<< "Determine o conjunto G, formado pelos membros que compoem a maior subcadeia ordenada de forma cescente em A.";
+        case 11:
+        {
+        cout<< "Calcule a amplitude dos conjuntos A e B.";
 
-          cout << "\n deseja continuar ? S/N";
-          cin >> continua;
-          break;
-          
-          case 14:
-          
-          cout<< "Determine o conjunto H, formado pelos membros que  compoem a maior subcadeia ordenada de forma decrescente em B.";
+        cout << "\n deseja continuar ? S/N";
+        cin >> continua;
+        break;
+        }
+        case 12:
+        {
+        cout<< "Calcule o produto escalar entre A e B quando possivel";
 
-          cout << "\n deseja continuar ? S/N";
-          cin >> continua;
-          break;
-          
-          case 15:
-         
-         cout<< "Determinar o conjunto i,formado pelos membros de A e B,intercalados de forma ordenada - os conjuntos A e B não estão ordenados.";
+        cout << "\n deseja continuar ? S/N";
+        cin >> continua;
+        break;
+        }
+        case 13:
+        {
+        cout<< "Determine o conjunto G, formado pelos membros que compoem a maior subcadeia ordenada de forma cescente em A.";
 
-         cout << "\n deseja continuar ? S/N";
-         cin >> continua;
-         break;
-         
+        cout << "\n deseja continuar ? S/N";
+        cin >> continua;
+        break;
+        }
+        case 14:
+        {
+        cout<< "Determine o conjunto H, formado pelos membros que  compoem a maior subcadeia ordenada de forma decrescente em B.";
+
+        cout << "\n deseja continuar ? S/N";
+        cin >> continua;
+        break;
+        }
+        case 15:
+        {
+        cout<< "Determinar o conjunto i,formado pelos membros de A e B,intercalados de forma ordenada - os conjuntos A e B não estão ordenados.";
+
+        cout << "\n deseja continuar ? S/N";
+        cin >> continua;
+        break;
+        }
 
     }
 
