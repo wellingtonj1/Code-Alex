@@ -45,17 +45,23 @@ void intersec(int* a,int tma,int* b, int tmb,int* c,int tmc)
 
 void vetuniao(int* a,int tma,int* b, int tmb, int* c , int tmc)
 {
-    *c=*a;
-
+    for(int z=0;z<tma;z++)
+    {
+	c[z]=a[z];
+	}
+	tmc=tma;
     for(int i=0; i<tma; i++)
     {
         for(int j=0;j<tmb; j++)
         {
-            if(a[i]!=b[j] || b[j]!=a[i])
+            if(a[i]!=b[j])
             {
-                if(c[tmc]!=b[j])
-                c[tmc]=b[j];
-                tmc+=1;
+				tmc+=1;
+                for(int k=tma;k<tmc;k++)
+                {
+				c[k]=b[j];
+					
+				}
             }
         }
     }
@@ -71,7 +77,7 @@ void vetimp(int* vx, int tx)
 {
     for(int i=0;i<tx;i++)
     {
-        cout<<"\nValores inserido na" << i <<"º posição = " << vx[i];
+        cout<<"\nValores inserido na " << i <<"º posição = " << vx[i];
     }
 }
 void vetler(int* x,int tx)
