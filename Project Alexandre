@@ -2,28 +2,33 @@
 #include <stdlib.h>
 
 using namespace std;
-void menas(int* a,int tma,int* b, int tmb,int* c,int tmc)
+void subconj(int* a,int tma,int* b,int tmb)
+{
+
+
+}
+void menas(int* a,int tma,int* b, int tmb,int* c,int tmc2)
 {
 
     for(int i=0; i<tma; i++)
     {
         for(int j=0;j<tmb; j++)
         {
-            if(a[j]!=b[i]&&c[tmc]!=b[j])
+            if(a[j]!=b[i]&&c[tmc2]!=b[j])
             {
-                c[tmc]=a[i];
-                tmc+=1;
+                c[tmc2]=a[i];
+                tmc2+=1;
             }
         }
     }
-    cout<<" Conjunto  A-B = ";
-    for(int x=0;x<tmc; x++)
+    cout<<" Conjunto  Diferença = ";
+    for(int x=0;x<tmc2; x++)
     {
         cout << c[x] << "\t " ;
     }
 
 }
-void intersec(int* a,int tma,int* b, int tmb,int* c,int tmc)
+void intersec(int* a,int tma,int* b, int tmb,int* c,int tmc1)
 {
     for(int i=0; i<tma; i++)
     {
@@ -31,13 +36,13 @@ void intersec(int* a,int tma,int* b, int tmb,int* c,int tmc)
         {
             if(a[i]==b[j] || b[j]==a[i])
             {
-                c[tmc]=b[j];
-                tmc+=1;
+                c[tmc1]=b[j];
+                tmc1+=1;
             }
         }
     }
     cout<<" Conjunto das interceções D = ";
-    for(int x=0;x<tmc; x++)
+    for(int x=0;x<tmc1; x++)
     {
         cout << c[x] << "\t " ;
     }
@@ -56,12 +61,13 @@ void vetuniao(int* a,int tma,int* b, int tmb, int* c , int tmc)
         {
             if(a[i]!=b[j])
             {
-				tmc+=1;
-                for(int k=tma;k<tmc;k++)
+
+                for(int k=tma;k<tma;k++)
                 {
 				c[k]=b[j];
-					
+
 				}
+				tma+1;
             }
         }
     }
@@ -201,7 +207,8 @@ int main()
         }
         case 7:
         {
-        cout<<"descobrir se A é subconjunto de B";
+        //cout<<"descobrir se A é subconjunto de B";
+        subconj(a,tma,b,tmb);
         cout << "\n deseja continuar ? S/N";
         cin >> continua;
         break;
