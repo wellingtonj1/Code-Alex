@@ -4,27 +4,78 @@
 using namespace std;
 void subconj(int* a,int tma,int* b,int tmb)
 {
+    int c=0;
+    bool iguais[c];
+        for(int i=0;i<tma;i++)
+        {
 
+            for(int j=0;j<tmb;j++)
+            {
+                if(a[i]==b[j])
+                {
+
+                    iguais[c]=true;
+                    c++;
+                    if(i<tma)
+                    {
+                    i++;
+                    j=-1;
+                    }
+                }
+                else
+                {
+                    iguais[i]=false;
+                }
+            }
+        }
 
 }
 void menas(int* a,int tma,int* b, int tmb,int* c,int tmc2)
 {
-
-    for(int i=0; i<tma; i++)
+   int conta=0;
+   bool dife;
+   for(int i=0;i<tma ;i++)
     {
-        for(int j=0;j<tmb; j++)
+        dife=false;
+        for(int j=0;j<tmb ; j++)
         {
-            if(a[j]!=b[i]&&c[tmc2]!=b[j])
+             dife=false;
+             if(a[i]-b[j]==0)
             {
-                c[tmc2]=a[i];
-                tmc2+=1;
+                dife=false;
+                if(i<tma)
+                {
+                i++;
+                j=-1;
+                }
             }
+
+            else
+            {
+                if(i<tma)
+                {
+                dife=true;
+                }
+            }
+
+
+        }
+
+        if(dife=true&&i<tma)
+        {
+
+            for(int p=tmc2;p<tmc2+1;p++)
+            {
+                c[p]=a[i];
+                conta++;
+            }
+            tmc2++;
         }
     }
-    cout<<" Conjunto  Diferença = ";
-    for(int x=0;x<tmc2; x++)
+    cout<<" Conjunto  Diferença D = ";
+    for(int x=0;x<conta; x++)
     {
-        cout << c[x] << "\t " ;
+        cout << c[x] <<"\t";
     }
 
 }
@@ -196,13 +247,18 @@ int main()
 
         cout << "\n deseja continuar ? S/N";
         cin >> continua;
+        system("cls");
         break;
         }
         case 6:
         {
         cout<<"função diferença ouu menos no inverso de valores";
+        int tmc=0;
+        int c[tmc];
+        menas(b,tmb,a,tma,c,tmc);
         cout << "\n deseja continuar ? S/N";
         cin >> continua;
+        system("cls");
         break;
         }
         case 7:
