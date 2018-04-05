@@ -2,34 +2,117 @@
 #include <stdlib.h>
 
 using namespace std;
-void subconj(int* a,int tma,int* b,int tmb)
+void disjunt(int* a,int tma,int* b,int tmb)
 {
-    int c=0;
-    bool iguais[c];
-        for(int i=0;i<tma;i++)
+    int t=0;
+    bool dif[t];
+    for(int i=0; i<tma;i++)
+    {
+        for(int j=0;j<tmb;j++)
         {
-
-            for(int j=0;j<tmb;j++)
+            if(a[i]!=b[j])
             {
-                if(a[i]==b[j])
-                {
-
-                    iguais[c]=true;
-                    c++;
-                    if(i<tma)
-                    {
-                    i++;
-                    j=-1;
-                    }
-                }
-                else
-                {
-                    iguais[i]=false;
-                }
+            dif[t]=true;
+            t++;
+            }
+            else
+            {
+                dif[t]=false;
+                t++;
             }
         }
+    }
+
+    int conta=0;
+    for(int d=0;d<t;d++)
+    {
+        conta+=dif[d];
+    }
+    if(conta!=t)
+    {
+        cout<< "\n não é um conjunto disjunto";
+    }
+    else
+    {
+        cout<< "\n é um conjunto disjunto";
+    }
+}
+void identicos(int* a,int tma,int* b,int tmb)
+{
+    int t=0;
+    bool iguais[t];
+    for(int i=0,d=0; i<tma;i++)
+    {
+        for(int j=0;j<tmb;j++)
+        {
+            if(a[i]==b[j])
+            {
+            iguais[t]=true;
+            t++;
+            if(i<tma)
+            {
+            i++;
+            j=-1;
+            }
+            }
+            else
+            {
+                iguais[t]=false;
+            }
+        }
+    }
+    int conta=0;
+    for(int d=0;d<t;d++)
+    {
+        conta+=iguais[d];
+    }
+    if(conta==tma||tma==tmb)
+    {
+        cout<< "\n é um conjunto identico";
+    }
+    else
+    {
+        cout<< "\n nao é um conjunto identico";
+    }
 
 }
+void subconj(int* a,int tma,int* b,int tmb)
+{
+    int t=0;
+    bool iguais[t];
+    for(int i=0,d=0; i<tma;i++)
+    {
+        for(int j=0;j<tmb;j++)
+        {
+            if(a[i]==b[j])
+            {
+            iguais[t]=true;
+            t++;
+            if(i<tma)
+            {
+            i++;
+            j=-1;
+            }
+            }
+            else
+            {
+                iguais[t]=false;
+            }
+        }
+    }
+    int conta=0;
+    for(int d=0;d<t;d++)
+    {
+        conta+=iguais[d];
+    }
+    if(conta==tma)
+    {
+        cout<< "\n é um subconjunto";
+    }
+    else
+        cout<< "\n nao é um subconjunto";
+}
+
 void menas(int* a,int tma,int* b, int tmb,int* c,int tmc2)
 {
    int conta=0;
@@ -252,7 +335,7 @@ int main()
         }
         case 6:
         {
-        cout<<"função diferença ouu menos no inverso de valores";
+        //cout<<"função diferença ouu menos no inverso de valores";
         int tmc=0;
         int c[tmc];
         menas(b,tmb,a,tma,c,tmc);
@@ -267,46 +350,50 @@ int main()
         subconj(a,tma,b,tmb);
         cout << "\n deseja continuar ? S/N";
         cin >> continua;
+        system("cls");
         break;
         }
         case 8:
         {
-        cout<<"descobrir se B é subconjunto de A";
-
-
+        //cout<<"descobrir se B é subconjunto de A";
+        subconj(b,tmb,a,tma);
         cout << "\n deseja continuar ? S/N";
         cin >> continua;
+        system("cls");
         break;
         }
         case 9:
         {
-        cout<<"descobrir se A e B são conjuntos identicos";
-
+        //cout<<"descobrir se A e B são conjuntos identicos";
+        identicos(a,tma,b,tmb);
         cout << "\n deseja continuar ? S/N";
         cin >> continua;
+        system("cls");
         break;
         }
         case 10:
         {
-        cout<<"descobrir se A e B são conjuntos disjuntos";
-
+        //cout<<"descobrir se A e B são conjuntos disjuntos";
+        disjunt(a,tma,b,tmb);
         cout << "\n deseja continuar ? S/N";
         cin >> continua;
+        system("cls");
         break;
         }
 
         case 11:
         {
-        cout<< "Calcule a amplitude dos conjuntos A e B.";
-
+        //cout<< "Calcule a amplitude dos conjuntos A e B.";
+    
         cout << "\n deseja continuar ? S/N";
         cin >> continua;
+        system("cls");
         break;
         }
         case 12:
         {
         cout<< "Calcule o produto escalar entre A e B quando possivel";
-
+        
         cout << "\n deseja continuar ? S/N";
         cin >> continua;
         break;
@@ -314,7 +401,7 @@ int main()
         case 13:
         {
         cout<< "Determine o conjunto G, formado pelos membros que compoem a maior subcadeia ordenada de forma cescente em A.";
-
+    
         cout << "\n deseja continuar ? S/N";
         cin >> continua;
         break;
