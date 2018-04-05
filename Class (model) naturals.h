@@ -4,9 +4,9 @@ private:
 int numN;
 
     public:
-        
-    void Natural(int n);
-    int getnumN();
+
+    void natural(int n);
+    int getnatural();
     void fatorialN();
     int getfatorialN();
     void perfeitoN();
@@ -26,5 +26,5 @@ int numN;
     void primo2N();
     int getprimo2N();
 
-    
+
 };
