@@ -41,7 +41,7 @@ void identicos(int* a,int tma,int* b,int tmb)
 {
     int t=0;
     bool iguais[t];
-    for(int i=0,d=0; i<tma;i++)
+    for(int i=0; i<tma;i++)
     {
         for(int j=0;j<tmb;j++)
         {
@@ -80,7 +80,7 @@ void subconj(int* a,int tma,int* b,int tmb)
 {
     int t=0;
     bool iguais[t];
-    for(int i=0,d=0; i<tma;i++)
+    for(int i=0; i<tma;i++)
     {
         for(int j=0;j<tmb;j++)
         {
@@ -144,7 +144,7 @@ void menas(int* a,int tma,int* b, int tmb,int* c,int tmc2)
 
         }
 
-        if(dife=true&&i<tma)
+        if(dife==true && i<tma)
         {
 
             for(int p=tmc2;p<tmc2+1;p++)
@@ -201,7 +201,7 @@ void vetuniao(int* a,int tma,int* b, int tmb, int* c , int tmc)
 				c[k]=b[j];
 
 				}
-				tma+1;
+				tma++;
             }
         }
     }
