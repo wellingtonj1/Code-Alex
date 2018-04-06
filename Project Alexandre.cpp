@@ -2,24 +2,40 @@
 #include <stdlib.h>
 
 using namespace std;
+void escalar(int* a,int tma,int* b,int tmb)
+{
+    int multi=0;
+    if(tma!=tmb)
+    {
+        cout<<"\n Os conjuntos não possuem os mesmos tamanhos"<<endl;
+    }
+    else
+    {
+    for(int i=0;i<tma;i++)
+    {
+        multi+=a[i]*b[i];
+    }
+    }
+    cout<< "\nO Produto escalar entre A e B ==" << multi <<endl;
+}
 int amplitude(int* a,int tma)
 {
 	int maior=0;
 	int menor= a[0];
 	for(int i=0; i<tma;i++)
 	{
-		
+
 	if( a[i]>maior)
 	{
-		maior=a[i];	
-	} 
+		maior=a[i];
+	}
 	if( a[i]<menor)
 	{
 		menor=a[i];
 	}
-	
+
 	}
-	
+
 	return maior-menor;
 }
 void disjunt(int* a,int tma,int* b,int tmb)
@@ -416,18 +432,19 @@ int main()
         }
         case 12:
         {
-        cout<< "Calcule o produto escalar entre A e B quando possivel";
-        
+        //cout<< "Calcule o produto escalar entre A e B quando possivel";
+        escalar(a,tma,b,tmb);
         cout << "\n deseja continuar ? S/N";
         cin >> continua;
+        system("cls");
         break;
         }
         case 13:
         {
         cout<< "Determine o conjunto G, formado pelos membros que compoem a maior subcadeia ordenada de forma cescente em A.";
-    
         cout << "\n deseja continuar ? S/N";
         cin >> continua;
+        system("cls");
         break;
         }
         case 14:
