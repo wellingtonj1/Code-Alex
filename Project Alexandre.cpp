@@ -2,6 +2,26 @@
 #include <stdlib.h>
 
 using namespace std;
+int amplitude(int* a,int tma)
+{
+	int maior=0;
+	int menor= a[0];
+	for(int i=0; i<tma;i++)
+	{
+		
+	if( a[i]>maior)
+	{
+		maior=a[i];	
+	} 
+	if( a[i]<menor)
+	{
+		menor=a[i];
+	}
+	
+	}
+	
+	return maior-menor;
+}
 void disjunt(int* a,int tma,int* b,int tmb)
 {
     int t=0;
@@ -384,7 +404,11 @@ int main()
         case 11:
         {
         //cout<< "Calcule a amplitude dos conjuntos A e B.";
-    
+		int na,nb;
+		na=amplitude(a,tma);
+		nb=amplitude(b,tmb);
+		cout<< "\nconjunto A= " << na;
+        cout<< "\nconjunto B="<< nb <<endl;
         cout << "\n deseja continuar ? S/N";
         cin >> continua;
         system("cls");
