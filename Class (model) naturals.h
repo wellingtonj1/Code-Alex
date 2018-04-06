@@ -1,11 +1,11 @@
-class naturais.h
+class naturais
 {
 private:
 int numN;
 
     public:
 
-    void natural(int n);
+    void setnatural(int n);
     int getnatural();
     void fatorialN();
     int getfatorialN();
