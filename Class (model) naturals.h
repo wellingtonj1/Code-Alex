@@ -1,6 +1,7 @@
-class naturais
+class naturals
 {
 private:
+
 int numN;
 
     public:
@@ -8,23 +9,14 @@ int numN;
     void setnatural(int n);
     int getnatural();
     void fatorialN();
-    int getfatorialN();
     void perfeitoN();
-    int getperfeitoN();
     void capicuaN();
-    inr getcapicuaN().
     void quadrapfN();
-    int getquadrapfN();
     void primoN();
-    int getprimoN();
     void mudabaseN();
-    int getmudabaseN();
     void maxdivN();
-    int getmaxdivN();
     void mindivN();
-    int getmindivN();
     void primo2N();
-    int getprimo2N();
-
-
+ 
+ 
 };
