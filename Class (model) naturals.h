@@ -8,8 +8,8 @@ int numN;
 
     void setnatural(int n);
     int getnatural();
-    void fatorialN();
-    void perfeitoN();
+    int fatorialN();
+    bool perfeitoN();
     void capicuaN();
     void quadrapfN();
     void primoN();
@@ -17,6 +17,6 @@ int numN;
     void maxdivN();
     void mindivN();
     void primo2N();
- 
- 
+
+
 };
