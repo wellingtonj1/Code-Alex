@@ -2,16 +2,16 @@ void natural(int n)
 {
 	if(n<0)
 	{
-	cout<< "\n você não digitou um numero natural : " << endl;
+		cout<< "\n você não digitou um numero natural : " << endl;
 	}
 	else
 	{
-	numN=n;
+		numN=n;
 	}
 
 }
 
-int fatorialN()
+long fatorialN()
 {
 	for(int i=1;i<numN;i++)
 	{
