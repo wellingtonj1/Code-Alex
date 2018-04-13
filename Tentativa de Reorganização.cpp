@@ -3,8 +3,7 @@
 #include <math.h>
 
 using namespace std;
-
-void natural(int n)
+void naturals::natural(int n)
 {
 	if(n<0)
 	{
@@ -17,7 +16,7 @@ void natural(int n)
 
 }
 
-long long fatorialN()
+long long naturals::fatorialN()
 {
 	for(int i=1;i<numN;i++)
 	{
@@ -25,7 +24,7 @@ long long fatorialN()
 	}
 }
 
-bool perfeitoN()
+bool naturals::perfeitoN()
 {
 	int raizn,soma=0;
 	raizn=sqrt(numN);
@@ -37,16 +36,16 @@ bool perfeitoN()
 
 	return (numN==soma);
 }
-    void capicuaN();
-    void quadrapfN();
-    bool primoN()
+    //void naturals::capicuaN();
+    //void naturals::quadrapfN();
+    bool naturals::primoN()
     {
         int raiz=0;
         raiz=sqrt(numN);
 		for(int i=2; i<=numN; i++)
 		{
             // EM TESTES //
-            if(numN%!=0&&numN!=1&&numN!=2)
+            if(numN%i!=0&&numN!=1&&numN!=2)
             {
             return true; //é primo
             }
