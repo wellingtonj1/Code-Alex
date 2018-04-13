@@ -1,3 +1,9 @@
+#include "naturals.h"
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
 void natural(int n)
 {
 	if(n<0)
@@ -55,4 +61,4 @@ bool perfeitoN()
     //void mudabaseN();
     //int maxdivN()
     //void mindivN()
-    //void primo2N();
+    //bool primo2N();
