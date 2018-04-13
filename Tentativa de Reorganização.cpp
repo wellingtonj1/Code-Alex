@@ -11,7 +11,7 @@ void natural(int n)
 
 }
 
-long fatorialN()
+long long fatorialN()
 {
 	for(int i=1;i<numN;i++)
 	{
@@ -39,7 +39,8 @@ bool perfeitoN()
         raiz=sqrt(numN);
 		for(int i=2; i<=numN; i++)
 		{
-            if(numN%!=0)
+            // EM TESTES //
+            if(numN%!=0&&numN!=1&&numN!=2)
             {
             return true; //é primo
             }
@@ -50,7 +51,8 @@ bool perfeitoN()
             }
 		}
 	}
-    void mudabaseN();
-    void maxdivN();
-    void mindivN();
-    void primo2N();
+    //IN CONSTRUCTION MotherMARE//
+    //void mudabaseN();
+    //int maxdivN()
+    //void mindivN()
+    //void primo2N();
