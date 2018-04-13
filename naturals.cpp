@@ -5,35 +5,48 @@
 using namespace std;
 void naturals::natural(int n)
 {
-	if(n<0)
-	{
-		cout<< "\n você não digitou um numero natural : " << endl;
-	}
-	else
-	{
-		numN=n;
-	}
+    int conta=1;
+	for(int i=0;i<conta;i++)
+    {
+        if(n<0)
+        {
+        cout<< "\n\tVoce nao digitou um numero valido \n \t Digite outro numero :";
+        cin>> n;
+        conta++;
+        }
+        else
+        {
+         numN=n;
+         break;
+        }
+
+    }
 
 }
 
 long long naturals::fatorialN()
 {
-	for(int i=1;i<numN;i++)
+    long long soma=1;
+	for(int i=2;i<=numN;i++)
 	{
-		return i*=i;
+     soma=soma*i;
 	}
+	return soma;
 }
 
 bool naturals::perfeitoN()
 {
-	int raizn,soma=0;
-	raizn=sqrt(numN);
-	for(int i=1;i<raizn;i++)
+	int i,x,soma=1;
+	x=sqrt(numN);
+	for(int i=2;i<numN;i++)
 	{
 		if(numN%i==0)
-		soma+=i+(numN/i);
+		soma=soma+i+i/numN;
 	}
-
+    if(numN==i*i)
+    {
+        soma+=i;
+    }
 	return (numN==soma);
 }
     //void naturals::capicuaN();
