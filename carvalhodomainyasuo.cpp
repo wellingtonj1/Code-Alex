@@ -12,15 +12,38 @@ int main()
     cin>>numero;
 
     p1.natural(numero);
-    //cout<< p1.fatorialN();
+    cout<< "\n O fatorial do numero " << numero << " é == " << p1.fatorialN();
     if(p1.perfeitoN())
     {
-        cout <<"\n é perfeito ";
+        cout <<"\n o numero " << numero << " é perfeito \n";
     }
     else
     {
-        cout <<"\n não é perfeito";
+        cout <<"\n o numero " << numero << " não é perfeito \n";
     }
-}
 
+    // Capicua
+
+    if(p1.capicuaN())
+    {
+        cout<<"\n o numero " << numero << " é capicua \n";
+    }
+    else
+    {
+        cout<<"\n o numero " << numero << " não é capicua \n";
+    }
+
+    //Quadra perfect
+
+    if(p1.quadrapfN())
+    {
+        cout<<"\n o numero " << numero << " é um quadrado perfeito \n";
+    }
+    else
+    {
+        cout<<"\n o numero " << numero << " não é um quadrado perfeito \n";
+    }
+
+    //
+}
 
