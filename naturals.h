@@ -10,7 +10,7 @@ int numN;
 
     public:
 
-    void natural(int);
+    bool natural(int);
     long long fatorialN();
     bool perfeitoN();
     bool capicuaN();
