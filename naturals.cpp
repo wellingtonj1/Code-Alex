@@ -4,25 +4,17 @@
 
 
 using namespace std;
-void naturals::natural(int n)
+bool naturals::natural(int n)
 {
-    int conta=1;
-	for(int i=0;i<conta;i++)
+    if(n>=0)
     {
-        if(n<0)
-        {
-        cout<< "\n\tVoce nao digitou um numero valido \n \t Digite outro numero :";
-        cin>> n;
-        conta++;
-        }
-        else
-        {
-         numN=n;
-         break;
-        }
-
+        numN=n;
+        return true;
     }
-
+    else
+    {
+        return false;
+    }
 }
 
 long long naturals::fatorialN()
