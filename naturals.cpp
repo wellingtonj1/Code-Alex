@@ -2,6 +2,7 @@
 #include <iostream>
 #include <math.h>
 
+
 using namespace std;
 void naturals::natural(int n)
 {
@@ -49,25 +50,32 @@ bool naturals::perfeitoN()
     }
 	return (numN==soma);
 }
-    //void naturals::capicuaN();
-    //void naturals::quadrapfN();
+    bool naturals::capicuaN()
+    {
+
+     int aux,resto,numeroinv=0;
+     aux=numN;
+     while(aux>0)
+     {
+         resto=aux%10;
+         aux=aux/10;
+         numeroinv=numeroinv*10+resto;
+     }
+    return (numeroinv==numN);
+    }
+    bool naturals::quadrapfN()
+    {
+        float aux=0;
+        int auxint=0;
+        aux=sqrt(numN);
+        auxint=aux;
+
+        return (aux<=auxint);
+
+    }
     bool naturals::primoN()
     {
-        int raiz=0;
-        raiz=sqrt(numN);
-		for(int i=2; i<=numN; i++)
-		{
-            // EM TESTES //
-            if(numN%i!=0&&numN!=1&&numN!=2)
-            {
-            return true; //é primo
-            }
-            else
-            {
-            return false;
-            break;
-            }
-		}
+
 	}
     //IN CONSTRUCTION MotherMARE//
     //void mudabaseN();
