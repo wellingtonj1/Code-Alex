@@ -1,3 +1,4 @@
+                                //IN CONSTRUCTION MotherMARE//
 #include "naturals.h"
 #include <iostream>
 #include <math.h>
@@ -99,12 +100,20 @@ bool naturals::perfeitoN()
         return n2;
     }
 
-	//naturals::mudabase()
-    //IN CONSTRUCTION MotherMARE//
-
-
     int naturals::mindiv(int n2)
     {
+    int mmc, aux;
 
+    for (int i = 2; i <= n2; i++)
+    {
+    aux = numN * i;
+
+        if ((aux % n2) == 0)
+        {
+        mmc = aux;
+        i = n2 + 1;
+        }
     }
-    //bool primo2();
+    return mmc;
+    }
+    //naturals::mudabase()
