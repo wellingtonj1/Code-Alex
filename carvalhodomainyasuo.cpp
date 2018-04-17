@@ -1,14 +1,17 @@
 #include "naturals.h"
 #include "naturals.cpp"
 #include <iostream>
+#include <stdlib.h>
+
 
 using namespace std;
 
 int main()
 {
-    int numero,escolha;
-    naturals p1;
-    cout<<"\nDigite um numero natural :";
+    int numero,numero2,escolha;
+    naturals p1,p2;
+    string continua="s";
+    cout<<"\nDigite um numero natural para o Primeiro objeto : ";
 
     for(int i=1;i<=1;i++)
         {
@@ -23,62 +26,134 @@ int main()
             }
         }
 
+    cout<<"\nDigite um numero natural para o Segundo objeto : ";
 
-    cout<< "\n===========================================Qual operação desejas realizar ?=========================================== \n";
+    for(int i=1;i<=1;i++)
+        {
+            cin>>numero2;
+            if(p2.natural(numero2))
+            {// o numero é natural
+            }
+            else
+            { // nao e natural
+            cout<< "\n o numero digitado nao é natural... Digite novamente : " <<endl;
+            i=0;
+            }
+        }
+    system("cls");
 
-    cout<< "\n Digite 1 para Calcular seu fatorial";
-    cout<< "\n Digite 2 para Verificar se é um numero perfeito";
-    cout<< "\n Digite 3 para Verificar se o numero é capicua";
-    cout<< "\n Digite 4 para Verificar se o numero é um quadrado perfeito"<<endl;
-    cin>>escolha;
 
-    switch(escolha)
+    while(continua=="S"||continua=="sim"||continua=="s"||continua=="Sim")
     {
+        cout<< "\n===========================================Qual operação desejas realizar ?=========================================== \n";
+        cout << "\t\t\tLembre ...  O numero que você digitou foi : " << p1.returns() << " no primeiro ... e : " << p2.returns() << " no segundo !"<< endl;
+        cout<< "\n Digite 1 para Calcular seu fatorial";
+        cout<< "\n Digite 2 para Verificar se é um numero perfeito";
+        cout<< "\n Digite 3 para Verificar se o numero é capicua";
+        cout<< "\n Digite 4 para Verificar se o numero é um quadrado perfeito";
+        cout<< "\n Digite 5 para Verificar se o numero é primo";
+        cout<< "\n Digite 6 para Calcular o maximo divisor comum (MDC)";
 
-        case 1:
+        cout<< "\n\n Digite a operação que desejas realizar : ";
+        cin>>escolha;
+
+        switch(escolha)
         {
-        cout<< "\n O fatorial do numero " << numero << " é == " << p1.fatorialN();
-        break;
+
+            case 1:
+            {
+            cout<< "\n O fatorial do numero " << numero << " é == " << p1.fatorialN()<<endl;
+            cout<< "\n O fatorial do numero " << numero2 << " é == " << p2.fatorialN()<<endl;
+            cout<< "\n Digite Sim para realizar outra operação : ";
+            cin>>continua;
+            system("cls");
+            break;
+            }
+
+            case 2:
+            {
+            if(p1.perfeitoN())
+            {
+            cout <<"\n o numero " << numero << " é perfeito \n";
+            }
+            else
+            {
+            cout <<"\n o numero " << numero << " não é perfeito \n";
+            }
+            if(p2.perfeitoN())
+            {
+                cout <<"\n o numero " << numero2 << " é perfeito \n";
+            }
+            else
+            {
+                cout <<"\n o numero " << numero2 << " não é perfeito \n";
+            }
+
+            cout<< "\n Digite Sim para realizar outra operação : ";
+            cin>>continua;
+            system("cls");
+            break;
+            }
+
+            case 3:
+            {
+            if(p1.capicuaN())
+            {
+            cout<<"\n o numero " << numero << " é capicua \n";
+            }
+            else
+            {
+            cout<<"\n o numero " << numero << " não é capicua \n";
+            }
+            cout<< "\n Digite Sim para realizar outra operação : ";
+            cin>>continua;
+            system("cls");
+            break;
+            }
+
+            case 4:
+            {
+            if(p1.quadrapfN())
+            {
+            cout<<"\n o numero " << numero << " é um quadrado perfeito \n";
+
+            }
+            else
+            {
+            cout<<"\n o numero " << numero << " não é um quadrado perfeito \n";
+
+            }
+            cout<< "\n Digite Sim para realizar outra operação : ";
+            cin>>continua;
+            system("cls");
+            break;
+            }
+            case 5:
+            {
+                if(p1.eprimo())
+                {
+                cout<< "\n O numero " << numero << " é primo \n";
+                }
+                else
+                {
+                cout<<"\n O numero " << numero << " não é primo \n";
+                }
+                cout<< "\n Digite Sim para realizar outra operação : ";
+                cin>>continua;
+                system("cls");
+                break;
+            }
+            case 6:
+
+            cout << "\n O maximo divisor comum (MDC) dos numeros informados é = " << p1.maxdiv(p2.returns()) << endl;
+
+            cout<< "\n Digite Sim para realizar outra operação : ";
+            cin>>continua;
+            system("cls");
+            break;
+
         }
 
-        case 2:
-        {
-        if(p1.perfeitoN())
-        {
-        cout <<"\n o numero " << numero << " é perfeito \n";
-        }
-        else
-        {
-        cout <<"\n o numero " << numero << " não é perfeito \n";
-        }
-        break;
-        }
-
-        case 3:
-        {
-        if(p1.capicuaN())
-        {
-        cout<<"\n o numero " << numero << " é capicua \n";
-        }
-        else
-        {
-        cout<<"\n o numero " << numero << " não é capicua \n";
-        }
-        break;
-        }
-
-        case 4:
-        {
-        if(p1.quadrapfN())
-        {
-        cout<<"\n o numero " << numero << " é um quadrado perfeito \n";
-        }
-        else
-        {
-        cout<<"\n o numero " << numero << " não é um quadrado perfeito \n";
-        }
-        break;
-        }
     }
 }
 
