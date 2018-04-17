@@ -20,7 +20,7 @@ int numN;
     //string mudabase();
     int maxdiv(int);
     int mindiv(int);
-    //bool primo2();
+
 
 };
 #endif
