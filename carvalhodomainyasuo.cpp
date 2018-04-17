@@ -144,14 +144,14 @@ int main()
                 break;
             }
             case 6:
-
+            {
             cout << "\n O maximo divisor comum (MDC) dos numeros informados é = " << p1.maxdiv(p2.returns()) << endl;
 
             cout<< "\n Digite Sim para realizar outra operação : ";
             cin>>continua;
             system("cls");
             break;
-
+            }
         }
 
     }
