@@ -1,7 +1,9 @@
 #include "naturals.h"
 #include <iostream>
 #include <math.h>
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <string>
 
 using namespace std;
 bool naturals::natural(int n)
@@ -15,6 +17,11 @@ bool naturals::natural(int n)
     {
         return false;
     }
+}
+
+int naturals::returns()
+{
+    return numN;
 }
 
 long long naturals::fatorialN()
@@ -65,12 +72,39 @@ bool naturals::perfeitoN()
         return (aux<=auxint);
 
     }
-    bool naturals::primoN()
+    bool naturals::eprimo()
+    {
+        int divide=0;
+        while(numN<=0);
+        for(int i=1; i <=numN; i++)
+        {
+            if(numN%i==0)
+            {
+             divide++;
+            }
+        }
+        return (divide==2);
+	}
+    int naturals::maxdiv(int n2)
+    {
+       int copnum=numN;
+       int resto=0;
+       resto=numN;
+              while(resto!=0)
+              {
+                  copnum = n2;
+                  n2    = resto;
+                  resto = copnum%n2;
+              }
+        return n2;
+    }
+
+	//naturals::mudabase()
+    //IN CONSTRUCTION MotherMARE//
+
+
+    int naturals::mindiv(int n2)
     {
 
-	}
-    //IN CONSTRUCTION MotherMARE//
-    //void mudabaseN();
-    //int maxdivN()
-    //void mindivN()
-    //bool primo2N();
+    }
+    //bool primo2();
